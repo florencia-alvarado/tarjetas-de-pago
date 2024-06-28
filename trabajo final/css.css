@@ -1,0 +1,51 @@
+body {
+    font-family: "Kanit", sans-serif;
+    background-color: #fabfb7;
+    text-align: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+
+#recargarTarjeta{
+    background-color: #EBDEF0;
+    width: 800px;
+    inset: 0;
+    margin: auto;
+    border-radius: 8px;
+}
+
+#habilitardeshabilitar{
+    background-color: #EBDEF0;
+    width: 800px;
+    inset: 0;
+    margin: auto;
+    border-radius: 8px;
+}
+
+#consultas{
+    background-color: #EBDEF0;
+    width: 800px;
+    inset: 0;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.kokun{
+    position: absolute;
+    right: 0;
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}

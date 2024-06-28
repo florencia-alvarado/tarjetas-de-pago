@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+    <title>gestiontarjetas</title>
+</head>
+<body>
+
+  <h1>Max Pass</h1>
+
+  <img class="logo" src="images/cat-nyan-cat.gif" width="150px"/>
+
+  <div id="cajas">
+    <label for="cajaSelect">Seleccionar Caja:</label>
+    <select id="cajaSelect" name="cajaSelect">
+        <option value="1">Caja 1</option>
+        <option value="2">Caja 2</option>
+        <option value="3">Caja 3</option>
+        <option value="4">Caja 4</option>
+        <option value="5">Caja 5</option>
+        <option value="6">Caja 6</option>
+        <option value="7">Caja 7</option>
+    </select>
+    
+
+  <div id="recargarTarjeta">
+      <h2>Recargar Tarjeta</h2>
+      <form id="formRecargarTarjeta">
+          <label for="numeroTarjetaRecargar">Número de Tarjeta:</label>
+          <input type="text" id="numeroTarjetaRecargar" name="numeroTarjetaRecargar"> <br><br>
+          
+          <label for="montoCarga">Monto a Cargar:</label>
+          <input type="text" id="montoCarga" name="montoCarga"><br><br>
+          
+          <button type="button" onclick="recargarTarjeta()">Recargar Tarjeta</button> <br><br>
+      </form>
+  </div>
+
+  <div id="habilitardeshabilitar">
+      <h2>Habilitar y deshabilitar tarjetas</h2>
+      <form id="formHabilitarDeshabilitar">
+        <label for="numeroTarjetaHabilitar">Número de Tarjeta:</label>
+        <input type="text" id="numeroTarjetaHabilitar" name="numeroTarjetaHabilitar"> <br><br>
+
+        <button type="button" onclick="habilitar()">Habilitar</button>
+        <button type="button" onclick="deshabilitar()">Deshabilitar</button> <br><br>
+      </form>
+  </div>
+
+  <div id="consultas">
+      <h1>Consultas</h1>
+      <form id="formConsultas">
+          <div class="section">
+            <h2>Consultar tarjetas habilitadas y deshabilitadas</h2>
+            <button type="button" onclick="consultarTarjetasHabilitadas()">Consultar Tarjetas Habilitadas</button>
+            <button type="button" onclick="consultarTarjetasDeshabilitadas()">Consultar Tarjetas Deshabilitadas</button>
+          </div>
+          <br><br>
+          <div class="section">
+            <h2>Consultar tarjetas habilitadas por rango de fechas</h2>
+            <label for="fechaInicioConsulta">Fecha de inicio:</label>
+            <input type="date" id="fechaInicioConsulta" name="fechaInicioConsulta"> <br><br>
+            <label for="fechaFinConsulta">Fecha fin:</label>
+            <input type="date" id="fechaFinConsulta" name="fechaFinConsulta"> <br><br>
+            <button type="button" onclick="consultarTarjetasHabilitadasPorFecha()">Consultar</button>
+          </div>
+          <br><br>
+          <div class="section">
+            <h2>Consultar monto promedio de saldos anteriores</h2>
+            <button type="button" onclick="consultarMontoPromedioSaldosAnteriores()">Consultar monto promedio anteriores</button>
+            <p id="resultadoPromedioSaldos"></p>
+            <br><br>
+            <h2>Consultar monto total de saldos anteriores</h2>
+            <button type="button" onclick="consultarMontoTotalSaldosAnteriores()">Consultar monto total de saldos anteriores</button>
+            <p id="resultadoTotalSaldos"></p>
+            <br><br>
+            <h2>Consultar monto promedio de cargas tarjetas de pago</h2>
+            <button type="button" onclick="consultarMontoPromedioCargas()">Consultar Monto Promedio de Cargas</button>
+            <p id="resultadoPromedioCargas"></p>
+            <br><br>
+            <h2>Consultar Monto total de las cargas de las tarjetas habilitadas</h2>
+            <button type="button" onclick="consultarMontoTotalCargasHabilitadas()">Consultar monto total de cargas habilitadas</button>
+            <p id="resultadoTotalCargasHabilitadas"></p>
+            <br><br>
+            <h2>Consultar Monto total de las cargas de las tarjetas deshabilitadas</h2>
+            <button type="button" onclick="consultarMontoTotalCargasDeshabilitadas()">Consultar monto total de cargas de tarjetas deshabilitadas</button>
+            <p id="resultadoTotalCargasDeshabilitadas"></p> <br><br>
+          </div>
+      </form>
+  </div>
+
+  </div>
+
+  <img class="kokun" src="images/goku-griddy.gif" width="50px"> 
+
+  <script src="js.js"></script>
+</body>
+</html>
